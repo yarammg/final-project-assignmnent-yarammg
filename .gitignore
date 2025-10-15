@@ -1,0 +1,5 @@
+# Ignore everything else
+build/tmp/
+build/sstate-cache/
+build/downloads/
+bitbake-cookerdaemon.log
