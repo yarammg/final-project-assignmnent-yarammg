@@ -1,0 +1,24 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "nvidia,p2822-0000+p2888-0001", "nvidia,tegra194";
+
+    fragment@0 {
+        target-path = "/";
+        __overlay__ {
+            i2c@3180000 {
+                #address-cells = <1>;
+                #size-cells = <0>;
+                status = "okay";
+
+                sht3x@44 {
+                    compatible = "sensirion,sht3x";
+                    reg = <0x44>;
+                    status = "okay";
+                };
+            };
+        };
+    };
+};
+
